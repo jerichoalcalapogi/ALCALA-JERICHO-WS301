@@ -1,6 +1,15 @@
+/* --- Global Variables and Base Styles --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+:root {
+    --primary-color: #b74b4b;
+    --background-color: #000;
+    --text-color: #fff;
+    --secondary-bg-color: #161616;
+    --accent-color: #ecf1ef;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,105 +19,26 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-body{
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: black;
-    color: white;
 }
 
-header{
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    background-color: transparent;
-    filter: drop-shadow(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+span {
+    color: var(--primary-color);
 }
 
-.logo{
-    font-size: 3rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.logo:hover{
-    transform: scale(1.1);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-/* Styles for navigation links on larger screens */
-nav a{
-    font-size: 1.8rem;
-    color: white;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover,
-nav a.active {
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
-}
-
-@media(max-width:995px){
-    nav{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-    }
-
-    /* Styles for navigation links on smaller screens (when nav is block-level) */
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        padding: 1rem;
-    }
-
-    nav a:hover,
-    nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
-    }
-}
-
-nav.active{
-    display: block;
-}
-
-/* General section styling */
-section{
+section {
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    padding: 5rem 9%;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
@@ -123,204 +53,204 @@ section{
     margin-bottom: 5rem;
 }
 
-.heading span {
-    color: #b74b4b;
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 
-.home{
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
     flex-direction: row;
     text-align: left;
     padding-top: 10rem;
+    background-color: var(--background-color);
 }
 
-.home .home-content h1{
+.home .home-content h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-span{
-    color: #b74b4b;
-}
-
-.home-content h3{
+.home-content h3 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    color: var(--accent-color);
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #ccc;
 }
 
-.home-img{
+.home-img {
     border-radius: 50%;
 }
 
-.home-img img{
-    position: relative;
+.home-img img {
     width: 32vw;
     max-width: 400px;
     border-radius: 50%;
-    box-shadow: 0 0 25px #b74b4b;
+    box-shadow: 0 0 25px var(--primary-color);
     cursor: pointer;
     transition: 0.2s linear;
 }
 
-.home-img img:hover{
+.home-img img:hover {
     transform: scale(1.05);
 }
 
-.social-icons a{
+
+.skills-hobbies {
+ 
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.skills-hobbies h2 {
+    font-size: 4rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+}
+
+.skills-hobbies ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.skills-hobbies li {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f5f3f3;
+}
+
+
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid #b74b4b;
+    border: 0.2rem solid var(--primary-color);
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: #b74b4b;
+    color: var(--primary-color);
 }
 
-.social-icons a:hover{
-    color: black;
+.social-icons a:hover {
+    color: var(--background-color);
     transform: scale(1.3) translateY(-5px);
-    background-color: #b74b4b;
-    box-shadow: 0 0 25px #b74b4b;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 25px var(--primary-color);
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: black;
+    background-color: var(--background-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: #b74b4b;
+    color: var(--primary-color);
     letter-spacing: 0.3rem;
     font-weight: 600;
-    border: 2px solid #b74b4b;
+    border: 2px solid var(--primary-color);
     transition: 0.3s ease;
     cursor: pointer;
 }
 
-.btn:hover{
-    transform: scale3d(1.03);
-    background-color: #b74b4b;
-    color: black;
-    box-shadow: 0 0 25px #b74b4b;
+.btn:hover {
+    transform: scale(1.03);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 25px var(--primary-color);
 }
 
-/* About Section Specific Styles */
-.about {
-    background-color: black;
-    color: white;
-    padding-top: 10rem;
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: var(--secondary-bg-color);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        padding: 1rem;
+    }
+
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid var(--primary-color);
+    }
 }
 
-.about-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center; /* Centered the overall about content */
+nav.active {
+    display: block;
 }
 
-.about-content h3 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.about-content p {
-    font-size: 2rem; /* Increased font size for main paragraph */
-    line-height: 1.8; /* Adjusted line height for readability */
-    margin-bottom: 3rem;
-}
-
-.about-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.detail-block {
-    background-color: #1a1a1a;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    flex: 1 1 300px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    border: 1px solid #b74b4b;
-    text-align: left; /* Kept text left-aligned within detail blocks */
-}
-
-.detail-block h4 {
-    font-size: 2.5rem; /* Increased font size for detail block headings */
-    color: #b74b4b;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.detail-block ul {
-    list-style: none;
-    padding: 0;
-}
-
-.detail-block ul li {
-    font-size: 1.8rem; /* Increased font size for list items */
-    margin-bottom: 1.2rem; /* Adjusted spacing between list items */
-    position: relative;
-    padding-left: 2.8rem; /* Adjusted padding for custom bullet */
-}
-
-.detail-block ul li::before {
-    content: '•';
-    color: #b74b4b;
-    font-size: 2.2rem; /* Increased custom bullet size */
-    position: absolute;
-    left: 0;
-    top: -0.2rem;
-}
-
-
-/* Contact Section Specific Styles */
-.contact {
-    background-color: black;
-    color: white;
-    padding-top: 10rem;
-}
-
-.contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.contact-content p {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.contact-content a {
-    color: #b74b4b;
-    text-decoration: underline;
-    transition: 0.3s ease;
-}
-
-.contact-content a:hover {
-    color: white;
-}
-
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
@@ -332,29 +262,8 @@ span{
         width: 60vw;
     }
 
-    .about-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .detail-block {
-        width: 90%;
-    }
-
     .heading {
         font-size: 5rem;
-    }
-
-    .about-content p {
-        font-size: 1.8rem; /* Adjust for smaller screens */
-    }
-
-    .detail-block h4 {
-        font-size: 2.2rem; /* Adjust for smaller screens */
-    }
-
-    .detail-block ul li {
-        font-size: 1.6rem; /* Adjust for smaller screens */
     }
 }
 
@@ -378,7 +287,11 @@ span{
         padding: 0.8rem 2rem;
         font-size: 1.4rem;
     }
+
     .heading {
         font-size: 4rem;
     }
+}
+.skills-hobbies p strong {
+    color: var(--primary-color);
 }
