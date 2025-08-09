@@ -1,4 +1,4 @@
-/* --- Global Variables and Base Styles --- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -12,10 +12,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -108,7 +104,7 @@ nav a.active {
     gap: 8rem;
     flex-direction: row;
     text-align: left;
-    padding-top: 10rem;
+    padding-top: 3rem;
     background-color: var(--background-color);
 }
 
@@ -128,7 +124,7 @@ nav a.active {
     font-size: 1.6rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    color: #ccc;
+    color: #eaf0ea;
 }
 
 .home-img {
@@ -139,9 +135,9 @@ nav a.active {
     width: 32vw;
     max-width: 400px;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--primary-color);
     cursor: pointer;
     transition: 0.2s linear;
+    box-shadow: 0 0 25px var(--primary-color);
 }
 
 .home-img img:hover {
@@ -151,7 +147,7 @@ nav a.active {
 
 .skills-hobbies {
  
-    margin-top: 2rem;
+    margin-top: 1 rem;
     width: 100%;
     max-width: 800px;
 }
@@ -159,7 +155,7 @@ nav a.active {
 .skills-hobbies h2 {
     font-size: 4rem;
     color: var(--accent-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .skills-hobbies ul {
